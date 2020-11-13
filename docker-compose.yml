@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  api-image-processing:
+    build:
+      context: ./template/node12
+    ports:
+      - 8000:3030
+    environment:
+      fprocess: nodemon -L index.js
+    secrets:
+      - message
+    volumes:
+      - ./api-image-processing:/home/app/function
+    user: root
+    command: sh -c "npm i -g nodemon && fwatchdog"
+
+secrets:
+  message:
+    file: ./secrets/message
+
+# https://gitlab.com/MrSimonEmms/openfaas-functions/-/blob/master/docker-compose.yaml
+
+# https://blog.alexellis.io/expose-grafana-dashboards/

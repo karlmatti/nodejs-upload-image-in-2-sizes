@@ -1,0 +1,9 @@
+* faas-cli new --lang node12 api-image-processing
+    > creates the api module
+* faas-cli up -f api-image-processing.yml
+    > getting an image to push to the docker hub
+    > getting deployed to local cluster
+    > then it will pull the image and run it
+* docker-compose up
+
+
