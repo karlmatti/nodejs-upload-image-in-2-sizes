@@ -1,4 +1,4 @@
-# Save images in 2 sizes on S3 bucket
+# Save image in 2 sizes on S3 bucket
 
 Technologies: 
 * Docker
